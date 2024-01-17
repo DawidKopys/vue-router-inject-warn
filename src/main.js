@@ -1,11 +1,11 @@
-import './assets/main.css'
-
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'
+import { routerWithApp  } from './router'
 
 const app = createApp(App)
 
-app.use(router)
+app.provide('foo', 'foo')
+
+app.use(routerWithApp)
 
 app.mount('#app')
