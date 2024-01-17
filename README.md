@@ -1,6 +1,6 @@
 # vue-router-inject-warn
 
-This repo presents how [app.runWithContext()](https://vuejs.org/api/application.html#app-runwithcontext)app.runWithContext() sets current app instance to `null`, causing `inject()` to fail.
+This repo presents how [app.runWithContext()](https://vuejs.org/api/application.html#app-runwithcontext) sets current app instance to `null`, causing `inject()` to fail.
 
 To run this example:
 ```bash
