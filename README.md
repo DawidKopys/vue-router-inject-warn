@@ -1,35 +1,18 @@
-# vue-router-inject-bug
+# vue-router-inject-warn
 
-This template should help get you started developing with Vue 3 in Vite.
+This repo presents how [app.runWithContext()](https://vuejs.org/api/application.html#app-runwithcontext)app.runWithContext() sets current app instance to `null`, causing `inject()` to fail.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+To run this example:
+```bash
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
+... and visit http://localhost:5173/. You should see below logs in the browser console:
 ```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+beforeEach 1 - regular inject(), working as expected
+  injected foo : foo
+beforeEach 2 - inject() after app.runWithContext, not working
+  runWithContext
+  [Vue warn]: inject() can only be used inside setup() or functional components.
+  injected foo : undefined
 ```
