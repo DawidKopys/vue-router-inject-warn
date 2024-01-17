@@ -1,5 +1,5 @@
 {
-  "name": "vue-router-inject-bug",
+  "name": "vue-router-inject-warn",
   "version": "0.0.0",
   "private": true,
   "type": "module",
